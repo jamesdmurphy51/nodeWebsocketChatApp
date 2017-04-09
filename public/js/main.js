@@ -1,5 +1,5 @@
 function onDOMLoaded(){
-    console.log('Loaindg');
+
     //start time loop for home page
     timeLoop();
     
