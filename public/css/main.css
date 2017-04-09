@@ -1,0 +1,39 @@
+#navBar{
+    margin-bottom:0;
+}
+
+.header{
+    margin-top:0;
+    margin-bottom:2%;
+}
+
+#time{
+    margin-left: 2%;
+    color:rgb(66,139,202);
+}
+
+#message{
+    margin-bottom: 3px;
+}
+
+#loginRow{
+    margin-bottom:5px;
+}
+
+.well{
+    margin-bottom:5px;
+}
+
+.list-group-item{
+    margin-bottom:1px;
+}
+
+#inputForm{
+    width: 300px;
+}
+
+#price{
+    color: red;
+}
+
+

@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BitCoin Chat Room</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--custom css-->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>  
+    <!-- nav bar -->
+    <nav class="navbar navbar-inverse" id="navBar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <span class="navbar-brand">myBitcoinChatApp</span>
+            </div>
+            <ul class="nav navbar-nav">
+                <li id="li_home" class="navLi"><a href="#home">Home</a></li>
+                <li id="li_register" class="navLi"><a href="#register">Register</a></li>
+                <li id="li_about" class="navLi"><a href="#about">About Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#" class="pull-right hidden-xs"><span id="uNameSpan">Your username here!</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end nav bar -->
+
+
+
+    <!-- main -->
+    <main class="container">
+
+
+        <!--*************BEGIN HOME PAGE************************************************************************************ -->
+        <!--*************BEGIN HOME PAGE************************************************************************************ -->
+        <div class="page" id=homePage>
+
+            <!-- header -->
+            <header class="container header">
+                <h3 class="text-muted">Hello<span id="fNameSpan1"></span><span id="lNameSpan1"></span>, Welcome to the Bitcoin Chat Application!</h3>
+            </header>
+            <!-- end header -->
+
+
+            <!--MAIN ROW -->
+            <div class="row">
+
+                <!-- section for users & bitCoin price & login (COL1) -->
+                <section class="col-sm-2 test">
+                    
+                    <!-- row to enter uname -->
+                    <div class="row" id="loginRow">
+                        <div class="input-group">   
+                            <input type="text" class="form-control" placeholder="Enter Username" id="uname_input">
+                            <span class="input-group-btn"><button class="btn btn-primary" type="button" id="go_btn">Go!</button></span>
+                        </div>
+                    </div>
+
+                    <!-- placeholder for price -->
+                    <div class="row">
+                        <article class="well">
+                            <h4 class="text-muted text-center">Bitcoin Price</h4>
+                            <h5 class="text-muted text-center" id="price"></h5>
+                        </article>  
+                    </div>
+                    
+                    <!-- placeholder ul for users -->
+                    <div class="row">
+                        <article class="well">
+                            <h4 class="text-muted  text-center">Online Users</h4>
+                            <ul class="list-group" id="users"></ul>
+                        </article>  
+                    </div>
+
+                </section>
+                <!-- end section -->
+
+                 <!-- main chat section (COL2) -->
+                <section class="col-sm-9 col-sm-offset-1 test">
+
+                    <!-- form -->
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label>Enter Message</label>
+                            <textarea class="form-control" id="message"></textarea>
+                            <input type="submit" class="btn btn-primary" value="Send Message">
+                        </div>
+                    </form>
+
+                    <!-- placeholder div for messages -->
+                    <div class="chat" id="chat"></div>
+
+                </section>
+
+            </div>
+            <!-- END MAIN ROW -->
+
+
+
+        </div>
+        <!--*************END HOME PAGE************************************************************************************ -->
+        <!--*************END HOME PAGE************************************************************************************ -->
+
+
+        <!--*************BEGIN REGISTER PAGE************************************************************************************ -->
+        <!--*************BEGIN REGISTER PAGE************************************************************************************ -->
+        <div class="page" id=regPage>
+            <!-- header -->
+            <header class="container header">
+                <h3 class="text-muted" id="regHeader">Hello<span id="fNameSpan2"></span><span id="lNameSpan2"></span>, Welcome to the Registration Page!</h3>
+            </header>
+            <!-- end header -->
+
+            <form id="inputForm">
+                <div class="form-group">
+                    <label for="userName">User name:</label>
+                    <input type="text" class="form-control" id="userName">
+                </div>
+                <div class="form-group">
+                    <label for="fName">First name:</label>
+                    <input type="text" class="form-control" id="fName">
+                </div>
+                <div class="form-group">
+                    <label for="lName">Last name:</label>
+                    <input type="text" class="form-control" id="lName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button type="submit" id = "submit_btn" class="btn btn-default">Submit</button>
+            </form> 
+        
+        </div>
+        <!--*************END REGISTER PAGE************************************************************************************ -->
+        <!--*************END REGISTER PAGE************************************************************************************ -->
+
+
+        <!--*************BEGIN ABOUT PAGE************************************************************************************ -->
+        <!--*************BEGIN ABOUT PAGE************************************************************************************ -->
+        <div class="page" id=aboutPage>
+            <!-- header -->
+            <header class="container header">
+                <h3 class="text-muted" id="aboutHeader">Hello<span id="fNameSpan3"></span><span id="lNameSpan3"></span>, Welcome to the About Us Page!</h3>
+            </header>
+            <!-- end header -->
+        </div>
+        <!--*************END ABOUT PAGE************************************************************************************ -->
+        <!--*************END ABOUT PAGE************************************************************************************ -->
+
+
+
+    </main>
+    <!-- end main -->
+
+
+    <footer class="navbar-fixed-bottom navbar-inverse">
+        <div class="container">
+            <p class="text-muted">&copy;jamesdavidmurphy.com <span id="time" class="pull-right"></span></p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- socket.io js-->
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
+    <!-- custom js -->
+    <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", onDOMLoaded);
+    </script>
+
+</body>
+</html>
