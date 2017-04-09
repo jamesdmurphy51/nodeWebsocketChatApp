@@ -7,7 +7,12 @@ const server = http.createServer();
 server.on('request', (app)); 
 //const server = require('http').createServer(app);
 
+/*
 server.listen(8080, 'localhost', function () {
+  console.log('Server listening on port 8080')
+})
+*/
+server.listen(80, '138.197.220.209', function () {
   console.log('Server listening on port 80')
 })
 //*******************************************************************
